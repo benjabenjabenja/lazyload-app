@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 export interface CustomLinkProps {
     name: string;
-    path: string;
+    to: string;
 }
 
-const CustomLink: React.FC<CustomLinkProps> = ({ name, path }) => (<li> <NavLink to={path ?? "-"} activeClassName="nav-active" exact>{name ?? "-"}</NavLink> </li>);
+const CustomLink: React.FC<CustomLinkProps> = ({ name, to }) => (<li> <NavLink to={to ?? "-"} activeClassName="nav-active" exact>{name ?? "-"}</NavLink> </li>);
 export default CustomLink;

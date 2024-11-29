@@ -7,7 +7,7 @@ export const SwitchComponent: React.FC<SwitchProps> = ({ routes }) => {
     console.log({routes})
     return (
 	<Switch>
-		{routes && routes.map(({ path, name }) => (<Route key={path} path={path ?? "-"} exact> <h1>{name ?? "-"}</h1> </Route>))}
+		{routes && routes.map(({ path, name, Component }) => (<Route key={name} path={path ?? "-"} exact> <Component /> </Route>))}
 	</Switch>
 )};
 export default SwitchComponent;

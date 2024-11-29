@@ -20,7 +20,7 @@ export const NavComponent: React.FC<NavProps> = ({ routes }) => {
 		<nav>
 			<img src={logo} alt="React Logo" />
 			<ul>
-				{routes && routes?.map(({ path, name }) => (<CustomLink name={name} path={path} key={path} />) )}
+				{routes && routes?.map(({ to, name }) => (<CustomLink name={name} to={to} key={name} />) )}
 			</ul>
 		</nav>
 	);

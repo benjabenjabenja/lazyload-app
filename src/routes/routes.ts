@@ -1,5 +1,6 @@
 //Components"
-import { About, Home, Users } from "../lazyload-module/pages";
+import { Users } from "../lazyload-module/pages";
+import { About, Home } from "../pages";
 //Utils:
 import { IRoute } from "../utils/utils";
 

@@ -1,9 +1,10 @@
 //Components"
-import LazyloadLayout from "../lazyload-module/layout/LazyloadLayout";
-import { lazyloadRoutes } from "../lazyload-module/router/routes";
+import { lazy } from "react";
 import { About, Home } from "../pages";
 //Utils:
 import { IRoute } from "../utils/utils";
+
+const LazyloadLayout = lazy(() => import('../lazyload-module/layout/LazyloadLayout'));
 
 export const routes: IRoute[] = [
 	{
@@ -19,10 +20,9 @@ export const routes: IRoute[] = [
 		to: 'about',
 	},
     {
-        path: '/lazyload/',
+        path: '/lazyload',
         name: 'Lazy Load',
         Component: LazyloadLayout,
-        to: 'lazyload',
-        children: lazyloadRoutes
+		to: 'lazyload',
     }
 ];

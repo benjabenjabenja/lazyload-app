@@ -6,7 +6,7 @@ import CustomLink from "./CustomLink";
 export interface IRoute {
 	path: string;
 	name: string;
-	Component: React.FC;
+	Component: React.FC<any>;
 	to: string;
 	children?: IRoute[];
 }

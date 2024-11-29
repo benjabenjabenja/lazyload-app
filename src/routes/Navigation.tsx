@@ -1,17 +1,10 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 //Components:
-import NavComponent from '../components/NavComponent';
-import SwitchComponent from '../components/SwitchComponents';
-//Routes:
-import { routes } from './routes';
-
-export const Navigation = () => {
-	return (
-		<Router>
-			<div className="main-layout">
-				<NavComponent routes={routes} />
-				<SwitchComponent routes={routes} />		
-			</div>
-		</Router>
-	);
+import { CustomRouter } from '../components/CustomRouter';
+//Utils:
+import { IRoute } from '../utils/utils';
+export interface NavigationProps {
+	routes: IRoute[];
 }
+
+export const Navigation: React.FC<NavigationProps> = ({ routes }) => (<CustomRouter routes={routes} />);
+export default Navigation;

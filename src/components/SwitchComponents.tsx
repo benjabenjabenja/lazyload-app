@@ -3,11 +3,9 @@ import { NavProps } from "./NavComponent";
 
 export type SwitchProps = Pick<NavProps, "routes">;
 
-export const SwitchComponent: React.FC<SwitchProps> = ({ routes }) => {
-    console.log({routes})
-    return (
-	<Switch>
+export const SwitchComponent: React.FC<SwitchProps> = ({ routes }) =>
+	(<Switch>
 		{routes && routes.map(({ path, name, Component }) => (<Route key={name} path={path ?? "-"} exact> <Component /> </Route>))}
-	</Switch>
-)};
+	</Switch>);
+	
 export default SwitchComponent;

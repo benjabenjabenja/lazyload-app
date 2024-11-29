@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { NavProps } from "./NavComponent";
 
 export type SwitchProps = Pick<NavProps, "routes">;

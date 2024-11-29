@@ -4,7 +4,7 @@ import { About, Home } from "../pages";
 //Utils:
 import { IRoute } from "../utils/utils";
 
-const LazyloadLayout = lazy(() => import('../lazyload-module/layout/LazyloadLayout'));
+const LazyloadLayout = lazy(() => import(/* webpackChunckName:"LazyloadLayout" */'../lazyload-module/layout/LazyloadLayout'));
 
 export const routes: IRoute[] = [
 	{
